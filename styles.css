@@ -1,0 +1,128 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #141414;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding-top: 60px; /* to account for the fixed header */
+}
+
+.hero {
+    background-image: url('https://static.wixstatic.com/media/cc3c19_cbd914f0c500445884dedd0a88d14386~mv2.png/v1/fill/w_577,h_775,al_c,lg_1,q_90/cc3c19_cbd914f0c500445884dedd0a88d14386~mv2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+button {
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #f40612;
+}
+
+.movies, .kids-movies, .action-movies, .comedy-movies, .horror-movies {
+    padding: 2rem;
+}
+
+.movies h2, .kids-movies h2, .action-movies h2, .comedy-movies h2, .horror-movies h2 {
+    margin: 0 0 1rem 0;
+}
+
+.movie-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+}
+
+.movie-item {
+    min-width: 200px;
+    height: 300px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #141414;
+    text-align: center;
+    padding: 1rem;
+}
